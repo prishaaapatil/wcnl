@@ -3,52 +3,55 @@ index.html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>External CSS Demo</title>
+  <title>External CSS Example</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <p class="info">This page shows <span>External CSS</span> features.</p>
+  <h1>Welcome to External CSS</h1>
+  <p class="note">This shows <span>External CSS</span> features.</p>
   <ul class="list">
     <li>Colors</li><li>Fonts</li><li>Backgrounds</li>
   </ul>
   <table>
     <tr><th>Topic</th><th>Done?</th></tr>
     <tr><td>Selectors</td><td>Yes</td></tr>
-    <tr><td>Pseudo</td><td>Yes</td></tr>
+    <tr><td>Pseudo Classes & Elements</td><td>Yes</td></tr>
   </table>
   <a href="#">Hover Link</a>
+  <br><br>
   <button>Click Me</button>
 </body>
 </html>
 
+
 style.css
 body{
-  background:#f0f4ff;
+  background:#f0f8ff;
   color:#222;
   font-family:Arial, sans-serif;
   text-align:center;
   padding:20px;
 }
-/* colors, fonts, bg */
+/* color, fonts, background */
 h1{color:#4b0082;}
 p span{color:#0077b6;font-weight:bold;}
 /* lists */
-.list{list-style:square inside;padding:0;}
-.list li{margin:5px;color:#444;}
-/* table */
+.list{list-style:square inside;color:#333;}
+.list li{margin:5px;}
+/* tables */
 table{margin:15px auto;border-collapse:collapse;width:60%;}
-th,td{border:1px solid #aaa;padding:6px;}
-th{background:#dbeafe;}
-tr:nth-child(even){background:#eef2ff;}
+th,td{border:1px solid #999;padding:6px;}
+th{background:#c7d2fe;}
+tr:nth-child(even){background:#e0e7ff;}
 /* selectors */
-p.info{font-style:italic;}
+p.note{font-style:italic;}
 a[href]{color:#4b0082;text-decoration:none;}
 /* pseudo-classes */
 a:hover{color:#00b4d8;}
 button:hover{background:#4b0082;color:white;cursor:pointer;}
-/* pseudo-elements */
+/* pseudo-element (no emoji) */
 h1::after{
-  content:" ✨";
+  content:" - Styled Page";
   color:#00b4d8;
+  font-size:0.9em;
 }
