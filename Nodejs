@@ -1,0 +1,54 @@
+// app.js
+const express = require('express');
+const app = express();
+
+// ---------- CALLBACK EXAMPLE ----------
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+greet("Avi", () => {
+  console.log("Callback executed after greeting!");
+});
+
+// ---------- EVENT LOOP EXAMPLE ----------
+console.log("Start of Event Loop Demo");
+
+setTimeout(() => {
+  console.log("This runs after 2 seconds (Event Loop)");
+}, 2000);
+
+console.log("End of Event Loop Demo");
+
+// ---------- EXPRESS APP ----------
+app.get('/', (req, res) => {
+  res.send("Welcome to my Express App!");
+});
+
+// Additional route demonstrating callback & async behavior
+app.get('/callback', (req, res) => {
+  function asyncGreeting(name, cb) {
+    setTimeout(() => {
+      cb(`Hello ${name}, this is async greeting!`);
+    }, 1000);
+  }
+
+  asyncGreeting("Avi", (message) => {
+    res.send(message);
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
+
+folder1/
+└─ app.js
+cd path/to/folder1
+npm init -y
+npm install express
+node app.js
+http://localhost:3000         → Home route
+http://localhost:3000/callback → Async callback route
+
