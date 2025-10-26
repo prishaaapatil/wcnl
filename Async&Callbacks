@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Async & Callbacks Demo</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:20px;">
+<h2>Asynchronous Programming with Callbacks</h2>
+<button onclick="fetchData()">Fetch Data</button>
+<p id="output"></p>
+<script>
+// Simulate an asynchronous operation using setTimeout
+function fetchData() {
+  const output = document.getElementById('output');
+  output.textContent = 'Fetching data...';
+  // asynchronous function with callback
+  getDataFromServer(function(data) {
+    output.textContent = 'Data received: ' + data;
+  });
+}
+// Async function that takes a callback
+function getDataFromServer(callback) {
+  setTimeout(() => {
+    const serverData = "Hello from server!";
+    callback(serverData); // call the callback after 2 seconds
+  }, 2000);
+}
+</script>
+</body>
+</html>
