@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Demo</title>
+<style>
+body{font-family:Arial,sans-serif;text-align:center;padding:20px;background:#f0f4f8;}
+.container{background:#fff;padding:20px;margin:15px auto;border-radius:8px;max-width:400px;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+input,button{padding:8px;margin:5px;width:90%;border-radius:6px;border:1px solid #ccc;}
+button{background:#3f51b5;color:#fff;border:none;cursor:pointer;}
+button:hover{background:#2c387e;}
+#output,#arrayOutput{margin-top:10px;font-weight:600;color:#222;}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>1. Change Background</h2>
+<button onclick="document.body.style.backgroundColor='#'+Math.floor(Math.random()*16777215).toString(16)">Change Color</button>
+</div>
+<div class="container">
+<h2>2. Even/Odd</h2>
+<input type="number" id="num" placeholder="Enter number">
+<button onclick="checkEvenOdd()">Even/Odd</button>
+<div id="output"></div>
+</div>
+<div class="container">
+<h2>3. Array Functions</h2>
+<input type="text" id="arrInput" placeholder="Enter items comma separated">
+<button onclick="arrayDemo()">Run Array</button>
+<div id="arrayOutput"></div>
+</div>
+<script>
+function getNum(){const n=parseInt(document.getElementById('num').value);return isNaN(n)?null:n;}
+function checkEvenOdd(){const n=getNum();document.getElementById('output').textContent=n===null?'Enter number':n%2===0?'Even':'Odd';}
+function arrayDemo(){let items=document.getElementById('arrInput').value.split(',').map(i=>i.trim()).filter(i=>i);if(items.length===0){document.getElementById('arrayOutput').textContent='Enter valid items';return;}const upper=items.map(i=>i.toUpperCase()),aItems=items.filter(i=>i.toLowerCase().startsWith('a')),longItem=items.find(i=>i.length>6)||'None';document.getElementById('arrayOutput').innerHTML=`Original: [${items}]<br>Upper: [${upper}]<br>Start A: [${aItems}]<br>Length>6: ${longItem}<br>Joined: ${items.join(', ')}`;}
+</script>
+</body>
+</html>
