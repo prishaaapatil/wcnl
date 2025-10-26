@@ -5,46 +5,49 @@
   <title>Internal CSS Example</title>
   <style>
     body{
-      background-color:#f0f8ff;
+      background:#f0f8ff;
       color:#222;
       font-family:Arial, sans-serif;
       text-align:center;
+      padding:20px;
     }
     h1{color:#4b0082;}
-    p span{color:#0077b6;font-weight:bold;}
-    /* Lists */
-    ul{list-style:square inside;color:#333;}
+    p span{color:#0077b6; font-weight:bold;}
+    /* lists */
+    ul{list-style:square inside; color:#333;}
     li{margin:5px;}
-    /* Tables */
-    table{margin:auto;border-collapse:collapse;width:60%;}
-    th,td{border:1px solid #999;padding:6px;}
+    /* tables */
+    table{margin:auto; border-collapse:collapse; width:60%;}
+    th, td{border:1px solid #999; padding:6px;}
     th{background:#c7d2fe;}
     tr:nth-child(even){background:#e0e7ff;}
-    /* Selectors */
+    /* selectors */
     p.note{font-style:italic;}
-    a[href]{color:#4b0082;text-decoration:none;}
-    /* Pseudo Classes */
+    a[href]{color:#4b0082; text-decoration:none;}
+    /* pseudo-class */
     a:hover{color:#00b4d8;}
-    button:hover{background:#4b0082;color:white;cursor:pointer;}
-    /* Pseudo Elements */
+    button:hover{background:#4b0082; color:white; cursor:pointer;}
+    /* pseudo-element */
     h1::after{
-      content:" ✨";
+      content:" - Styled Page";
       color:#00b4d8;
+      font-size:0.9em;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to Internal CSS</h1>
-  <p class="note">This shows <span>colors, fonts, background</span> and more.</p>
+  <p class="note">This shows <span>Internal CSS</span> features.</p>
   <ul>
     <li>Colors</li><li>Fonts</li><li>Backgrounds</li>
   </ul>
   <table>
     <tr><th>Feature</th><th>Included</th></tr>
     <tr><td>Selectors</td><td>Yes</td></tr>
-    <tr><td>Pseudo Classes</td><td>Yes</td></tr>
+    <tr><td>Pseudo Classes & Elements</td><td>Yes</td></tr>
   </table>
-  <a href="#">Hover Link</a><br><br>
+  <a href="#">Hover Link</a>
+  <br><br>
   <button>Click Me</button>
 </body>
 </html>
