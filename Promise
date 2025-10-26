@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Promises and Arrow Functions</h2>
+  <p id="result"></p>
+  <script>
+    // Arrow function returning a Promise
+    const asyncTask = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise Resolved Successfully!");
+        }, 2000);
+      });
+    };
+    // Call the function and show the result
+    asyncTask().then(msg => {
+      document.getElementById("result").innerHTML = msg;
+    });
+  </script>
+</body>
+</html>
