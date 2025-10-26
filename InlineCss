@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <title>Inline CSS Example</title>
   <style>
-    /* pseudo class only */
+    /* pseudo-class & pseudo-element (needed for hover and ::after) */
     a:hover{color:#00b4d8;}
+    h1::after{content:" - Styled Page"; color:#00b4d8; font-size:0.9em;}
   </style>
 </head>
-<body style="background-color:#f0f8ff; color:#222; font-family:Arial, sans-serif; text-align:center;">
+<body style="background:#f0f8ff; color:#222; font-family:Arial, sans-serif; text-align:center;">
   <h1 style="color:#4b0082;">Welcome to Inline CSS</h1>
-  <p style="font-style:italic;">This shows 
-    <span style="color:#0077b6; font-weight:bold;">Inline CSS features</span>.
-  </p>
+  <p style="font-style:italic;">This shows <span style="color:#0077b6; font-weight:bold;">Inline CSS</span> features.</p>
   <ul style="list-style:square inside; color:#333;">
     <li style="margin:5px;">Colors</li>
     <li style="margin:5px;">Fonts</li>
@@ -28,11 +27,12 @@
       <td style="border:1px solid #999; padding:6px;">Yes</td>
     </tr>
     <tr>
-      <td style="border:1px solid #999; padding:6px;">Pseudo Classes</td>
+      <td style="border:1px solid #999; padding:6px;">Pseudo Classes & Elements</td>
       <td style="border:1px solid #999; padding:6px;">Yes</td>
     </tr>
   </table>
-  <a href="#" style="color:#4b0082; text-decoration:none;">Hover Link</a><br><br>
+  <a href="#" style="color:#4b0082; text-decoration:none;">Hover Link</a>
+  <br><br>
   <button style="background:#4b0082; color:white; border:none; padding:6px 10px; border-radius:5px;">Click Me</button>
 </body>
 </html>
