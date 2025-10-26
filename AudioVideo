@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>Form & Multimedia</title></head>
+<head>
+<meta charset="UTF-8">
+<title>Form & Multimedia</title>
+</head>
 <body>
 <h2>Registration Form</h2>
 <form>
-Name: <input type="text"><br>
-Email: <input type="email"><br>
-Gender: <input type="radio" name="g">Male
-<input type="radio" name="g">Female<br>
-<input type="submit">
+  <fieldset>
+    <legend>Personal Information</legend>
+    Name:<br>
+    <input type="text" placeholder="Enter your name"><br><br>
+    
+    Email:<br>
+    <input type="email" placeholder="Enter your email"><br><br>
+    
+    Gender:<br>
+    <input type="radio" name="g" value="Male"> Male
+    <input type="radio" name="g" value="Female"> Female<br><br>
+    
+    <input type="submit" value="Submit">
+  </fieldset>
 </form>
+
 <h2>Multimedia Example</h2>
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg" width="200"><br>
-<audio controls><source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"></audio><br>
-<video width="300" controls><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
+
+<audio controls>
+  <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio><br>
+
+<video width="300" controls>
+  <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br>
+
+<h2>Iframe Example</h2>
+<iframe width="400" height="250"
+src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
 </body>
 </html>
